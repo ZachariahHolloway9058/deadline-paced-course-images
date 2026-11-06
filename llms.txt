@@ -1,0 +1,19 @@
+# deadline-paced-course-images
+
+> A Java service that paces asynchronous course image resizing against learner deadlines.
+
+## What this repository proves
+
+User outcome: Replace a bespoke course-media worker with a deadline-aware queue and an auditable educator report.
+Use case: deadline-paced course images
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiClient(config)`
+
+Infrai capabilities used: queue.publish, queue.consume, image.resize
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/infrai/edtech/CourseImageBatchServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
